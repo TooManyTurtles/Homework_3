@@ -9,7 +9,30 @@
 
 # Task 1
 
-
+try:
+    day_number = int(input("Pls input day number of the week: "))
+    if day_number <= 7 and day_number >= 1:
+        match day_number:
+                case 1:
+                    print("Monday")
+                case 2:
+                    print("Tuesday")
+                case 3:
+                    print("Wednesday")
+                case 4:
+                    print("Thursday")
+                case 5:
+                    print("Friday")
+                case 6:
+                    print("Saturday")
+                case 7:
+                    print("Sunday")
+    else:
+        print("Pls input integer from 1 to 7!")
+except ValueError as val_error:
+    print(f"Pls input only integer! {val_error}")
+except Exception as any_error:
+    print(f"Some error {Exception}")
 
 
 
