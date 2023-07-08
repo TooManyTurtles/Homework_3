@@ -56,25 +56,25 @@
 # 3. Користувач вводить два числа та матем дію: + - * або /
 # Залежно від введеної матем дії вивести результат
 
-try:
-    num1 = float(input("Input number 1: "))
-    num2 = float(input("Input number 2: "))
-    math = input("Input one of actions: ")
-    if math == "+" or math == "-" or math == "*" or math == "/":
-        match math:
-            case "+":
-                print(f"The summ of your numbers = {num1 + num2}")
-            case "-":
-                print(f"The difference of your numbers = {num1 - num2}")
-            case "*":
-                print(f"The multiplication of your numbers = {num1 * num2}")
-            case "/":
-                print(f"The division of your numbers = {num1 / num2}")
-    else:
-        print("Actions allowed: + - * /. Pls try again")
-except ZeroDivisionError:
-    print("Cant be divided by zero")
-except ValueError:
-    print("Input only numbers!")
-except Exception:
-    print("Unknown Error")
+# try:
+#     num1 = float(input("Input number 1: "))
+#     num2 = float(input("Input number 2: "))
+#     math = input("Input one of actions: ")
+#     if math == "+" or math == "-" or math == "*" or math == "/":
+#         match math:
+#             case "+":
+#                 print(f"The summ of your numbers = {num1 + num2}")
+#             case "-":
+#                 print(f"The difference of your numbers = {num1 - num2}")
+#             case "*":
+#                 print(f"The multiplication of your numbers = {num1 * num2}")
+#             case "/":
+#                 print(f"The division of your numbers = {num1 / num2}")
+#     else:
+#         print("Actions allowed: + - * /. Pls try again")
+# except ZeroDivisionError:
+#     print("Cant be divided by zero")
+# except ValueError:
+#     print("Input only numbers!")
+# except Exception:
+#     print("Unknown Error")
