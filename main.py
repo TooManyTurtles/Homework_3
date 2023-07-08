@@ -8,32 +8,48 @@
 # Якщо будуть потрібні додаткові завдання - писати лс.
 
 # Task 1
+# 1. Користувач вводить із клавіатури номер дня тижня (1-7). Необхідно вивести на екран назви дня тижня.
+# Наприклад, якщо 1, на екрані напис понеділок, 2 — вівторок тощо.
+
+# try:
+#     day_number = int(input("Pls input day number of the week: "))
+#     if 7 < day_number or 1 > day_number:
+#         print("Pls input integer from 1 to 7!")
+#     else:
+#         match day_number:
+#                 case 1:
+#                     print("Monday")
+#                 case 2:
+#                     print("Tuesday")
+#                 case 3:
+#                     print("Wednesday")
+#                 case 4:
+#                     print("Thursday")
+#                 case 5:
+#                     print("Friday")
+#                 case 6:
+#                     print("Saturday")
+#                 case 7:
+#                     print("Sunday")
+# except ValueError:
+#     print("Pls input only numbers!")
+# except Exception:
+#     print("Unknown Error")
+
+# Task 2
+# 2. Користувач вводить два числа. Визначити, чи рівні ці числа, і, якщо ні, вивести їх на екран у порядку зростання
 
 try:
-    day_number = int(input("Pls input day number of the week: "))
-    if day_number <= 7 and day_number >= 1:
-        match day_number:
-                case 1:
-                    print("Monday")
-                case 2:
-                    print("Tuesday")
-                case 3:
-                    print("Wednesday")
-                case 4:
-                    print("Thursday")
-                case 5:
-                    print("Friday")
-                case 6:
-                    print("Saturday")
-                case 7:
-                    print("Sunday")
+    num1 = int(input("Input number 1: "))
+    num2 = int(input("Input number 2: "))
+    if num1 == num2:
+        print("Your numbers are equal!")
+    elif num1 < num2:
+        print(f"Your numbers ARE NOT equal. In ascending order: {num1} {num2}")
     else:
-        print("Pls input integer from 1 to 7!")
-except ValueError as val_error:
-    print(f"Pls input only integer! {val_error}")
-except Exception as any_error:
-    print(f"Some error {Exception}")
-
-
-
+        print(f"Your numbers ARE NOT equal. In ascending order: {num2} {num1}")
+except ValueError:
+    print("Pls input only numbers!")
+except Exception:
+    print("Unknown Error")
 
