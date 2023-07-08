@@ -32,24 +32,49 @@
 #                 case 7:
 #                     print("Sunday")
 # except ValueError:
-#     print("Pls input only numbers!")
+#     print("Input only numbers!")
 # except Exception:
 #     print("Unknown Error")
 
 # Task 2
 # 2. Користувач вводить два числа. Визначити, чи рівні ці числа, і, якщо ні, вивести їх на екран у порядку зростання
 
+# try:
+#     num1 = int(input("Input number 1: "))
+#     num2 = int(input("Input number 2: "))
+#     if num1 == num2:
+#         print("Your numbers are equal!")
+#     elif num1 < num2:
+#         print(f"Your numbers ARE NOT equal. In ascending order: {num1} {num2}")
+#     else:
+#         print(f"Your numbers ARE NOT equal. In ascending order: {num2} {num1}")
+# except ValueError:
+#     print("Input only numbers!")
+# except Exception:
+#     print("Unknown Error")
+
+# 3. Користувач вводить два числа та матем дію: + - * або /
+# Залежно від введеної матем дії вивести результат
+
 try:
     num1 = int(input("Input number 1: "))
     num2 = int(input("Input number 2: "))
-    if num1 == num2:
-        print("Your numbers are equal!")
-    elif num1 < num2:
-        print(f"Your numbers ARE NOT equal. In ascending order: {num1} {num2}")
+    math = input("Input one of actions: ")
+    if math == "+" or math == "-" or math == "*" or math == "/":
+        match math:
+            case "+":
+                print(f"The summ of your numbers is {num1 + num2}")
+            case "-":
+                print(f"The summ of your numbers is {num1 - num2}")
+            case "*":
+                print(f"The summ of your numbers is {num1 * num2}")
+            case "/":
+                print(f"The summ of your numbers is {num1 / num2}")
     else:
-        print(f"Your numbers ARE NOT equal. In ascending order: {num2} {num1}")
+        print("Actions allowed: + - * /. Pls try again")
+except ZeroDivisionError:
+    print("Cant be divided by zero")
 except ValueError:
-    print("Pls input only numbers!")
+    print("Input only numbers!")
 except Exception:
     print("Unknown Error")
-
