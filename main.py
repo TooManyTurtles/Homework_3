@@ -57,19 +57,19 @@
 # Залежно від введеної матем дії вивести результат
 
 try:
-    num1 = int(input("Input number 1: "))
-    num2 = int(input("Input number 2: "))
+    num1 = float(input("Input number 1: "))
+    num2 = float(input("Input number 2: "))
     math = input("Input one of actions: ")
     if math == "+" or math == "-" or math == "*" or math == "/":
         match math:
             case "+":
-                print(f"The summ of your numbers is {num1 + num2}")
+                print(f"The summ of your numbers = {num1 + num2}")
             case "-":
-                print(f"The summ of your numbers is {num1 - num2}")
+                print(f"The difference of your numbers = {num1 - num2}")
             case "*":
-                print(f"The summ of your numbers is {num1 * num2}")
+                print(f"The multiplication of your numbers = {num1 * num2}")
             case "/":
-                print(f"The summ of your numbers is {num1 / num2}")
+                print(f"The division of your numbers = {num1 / num2}")
     else:
         print("Actions allowed: + - * /. Pls try again")
 except ZeroDivisionError:
